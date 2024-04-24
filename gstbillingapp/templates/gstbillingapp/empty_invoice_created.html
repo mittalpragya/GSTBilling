@@ -1,0 +1,16 @@
+{% extends "gstbillingapp/base.html" %}
+
+{% load static %}
+
+
+
+{% block content %}
+<h2>IMPORTANT</h2>
+<div style = "padding: 20px; background-color: #f44336; color: white;">
+  <a href="{% url 'invoices' %}">
+    <span style="margin-left: 15px; color: white; font-weight: bold; float: right; font-size: 22px;
+    line-height: 20px; cursor: pointer; transition: 0.3s;" onclick="this.parentElement.style.display='none';">&times;</span>
+    <strong>Important!</strong> You have created an empty invoice. Click here to see invoice list.
+  </a>
+</div>
+{% endblock %}
