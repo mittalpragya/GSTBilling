@@ -153,8 +153,13 @@ def invoice_create(request):
                                             customer_name=invoice_data['customer-name'],
                                             customer_address=invoice_data['customer-address'],
                                             customer_state=invoice_data['customer-state'],
-                                            customer_phone=invoice_data['customer-phone'],
-                                            customer_gst=invoice_data['customer-gst'])
+                                            customer_phone=invoice_data['customer-phone'])
+            # customer = Customer.objects.get(user=request.user,
+            #                                 customer_name=invoice_data['customer-name'],
+            #                                 customer_address=invoice_data['customer-address'],
+            #                                 customer_state=invoice_data['customer-state'],
+            #                                 customer_phone=invoice_data['customer-phone'],
+            #                                 customer_gst=invoice_data['customer-gst'])
         except:
             print("===============> customer not found")
             print(invoice_data['customer-name'])
